@@ -106,10 +106,6 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
             For visually impaired individuals, assistive navigation systems play a crucial role in enabling independent mobility.
             However, long-horizon planning based on natural language (NL) instructions in complex indoor environments remains a significant challenge.
             Recent studies show the strong potential of Large Language Models (LLMs) in NL understanding and task-level planning.
@@ -124,6 +120,26 @@
       </div>
     </div>
     <!--/ Abstract. -->
+
+    <div class="container is-max-desktop">
+    <!-- Related Work. -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Related Work</h2>
+        <div class="content has-text-centered">
+          <!-- 添加图片 -->
+          <img src="./static/images/1.png" alt="LLM-based Planning Agents Comparison" style="max-width: 90%; height: auto; margin-bottom: 1rem;">
+          <p class="is-italic">
+            Schematic diagrams of different LLM-based agents for planning. Our agent integrates the strengths of others. 
+            An external planner is employed to complement the LLM's limited mathematical reasoning. Diverse candidate 
+            plans are generated first, and the optimal one is then selected by an auxiliary LLM, which also performs 
+            feedback-driven refinement when necessary.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Related Work. -->
+  </div>
 
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
@@ -141,7 +157,7 @@
 
 <footer class="footer">
     <div class="columns is-centered">
-      <div class="column is-8">
+      <div class="column has-text-centered">
         <div class="content">
           <p>
             This page was built using the <a href="https://github.com/google/nerfies">Academic Project Page Template</a>.

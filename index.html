@@ -152,124 +152,139 @@
     </div>
   </div>
   
-    <div class="table-container" style="overflow-x:auto; margin-top:1rem;">
-    <table style="width:100%; table-layout: fixed; border-collapse: collapse; font-size: 0.85rem; text-align:center;">
-      <thead>
-        <tr>
-          <th>System</th>
-          <th>Form</th>
-          <th>Navigation</th>
-          <th>Indoor<br>Localization</th>
-          <th>Long-horizon<br>Planning</th>
-          <th>Core<br>Sensors</th>
-          <th>Input<br>Mode</th>
-          <th>Feedback<br>Mode</th>
-          <th>NL<br>Interaction</th>
-          <th>Hands<br>Free</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>WanderGuide</td>
-          <td>Wheeled</td>
-          <td>✗</td>
-          <td>✓</td>
-          <td>✗</td>
-          <td>RGB-D<br>Camera,<br>LiDAR,<br>Touch Sensor</td>
-          <td>Audio<br>Button</td>
-          <td>Audio<br>Kinesthetic</td>
-          <td>✓</td>
-          <td>✗</td>
-        </tr>
-        <tr>
-          <td>DRAGON</td>
-          <td>Wheeled</td>
-          <td>✓</td>
-          <td>✓</td>
-          <td>✗</td>
-          <td>RGB-D<br>Camera,<br>LiDAR</td>
-          <td>Audio</td>
-          <td>Audio<br>Kinesthetic</td>
-          <td>✓</td>
-          <td>✗</td>
-        </tr>
-        <tr>
-          <td>Wayfinding Robot</td>
-          <td>Quadruped</td>
-          <td>✗</td>
-          <td>✓</td>
-          <td>✗</td>
-          <td>RGB-D<br>Camera,<br>LiDAR</td>
-          <td>Audio</td>
-          <td>Kinesthetic</td>
-          <td>✗</td>
-          <td>✗</td>
-        </tr>
-        <tr>
-          <td>Robotic Guide Dog</td>
-          <td>Quadruped</td>
-          <td>✓</td>
-          <td>✓</td>
-          <td>✗</td>
-          <td>RGB-D<br>Camera,<br>LiDAR,<br>Force Sensor</td>
-          <td>-</td>
-          <td>Kinesthetic</td>
-          <td>✗</td>
-          <td>✗</td>
-        </tr>
-        <tr>
-          <td>Augmented Cane</td>
-          <td>Smart Cane</td>
-          <td>✓</td>
-          <td>✗</td>
-          <td>✗</td>
-          <td>RGB Camera,<br>LiDAR,<br>IMU,<br>GPS</td>
-          <td>Button</td>
-          <td>Kinesthetic<br>Vibrotactile</td>
-          <td>✗</td>
-          <td>✗</td>
-        </tr>
-        <tr>
-          <td>Intelligent Aid</td>
-          <td>Wearable</td>
-          <td>✗</td>
-          <td>✗</td>
-          <td>✗</td>
-          <td>IMU,<br>Infrared Sensor,<br>GPS</td>
-          <td>-</td>
-          <td>Cloud Alert<br>Vibrotactile</td>
-          <td>✗</td>
-          <td>✗</td>
-        </tr>
-        <tr>
-          <td>Haptic Cuff</td>
-          <td>Wearable</td>
-          <td>✗</td>
-          <td>✗</td>
-          <td>✗</td>
-          <td>RGB-D Camera,<br>CUFF Force Sensor</td>
-          <td>-</td>
-          <td>Audio<br>Force</td>
-          <td>✗</td>
-          <td>✓</td>
-        </tr>
-        <tr>
-          <td><strong>Ours</strong></td>
-          <td>Wearable</td>
-          <td>✓</td>
-          <td>✓</td>
-          <td>✓</td>
-          <td>RGB-D Camera,<br>IMU,<br>Magnetometer</td>
-          <td>Audio</td>
-          <td>Audio<br>Vibrotactile</td>
-          <td>✓</td>
-          <td>✓</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <div class="table-container" style="margin-top:1rem;">
+  <table class="table is-bordered is-striped is-hoverable is-narrow" style="table-layout: fixed; width: 100%; font-size:0.85rem; text-align:center; vertical-align:middle;">
+    <thead>
+      <tr>
+        <th>System</th>
+        <th>Form</th>
+        <th>Navigation</th>
+        <th>Indoor<br>Localization</th>
+        <th>Long-horizon<br>Planning</th>
+        <th>Core<br>Sensors</th>
+        <th>Input<br>Mode</th>
+        <th>Feedback<br>Mode</th>
+        <th>NL<br>Interaction</th>
+        <th>Hands<br>Free</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>WanderGuide</td>
+        <td>Wheeled</td>
+        <td>✗</td>
+        <td>✓</td>
+        <td>✗</td>
+        <td>RGB-D<br>Camera,<br>LiDAR,<br>Touch Sensor</td>
+        <td>Audio<br>Button</td>
+        <td>Audio<br>Kinesthetic</td>
+        <td>✓</td>
+        <td>✗</td>
+      </tr>
+      <tr>
+        <td>DRAGON</td>
+        <td>Wheeled</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✗</td>
+        <td>RGB-D<br>Camera,<br>LiDAR</td>
+        <td>Audio</td>
+        <td>Audio<br>Kinesthetic</td>
+        <td>✓</td>
+        <td>✗</td>
+      </tr>
+      <tr>
+        <td>Wayfinding Robot</td>
+        <td>Quadruped</td>
+        <td>✗</td>
+        <td>✓</td>
+        <td>✗</td>
+        <td>RGB-D<br>Camera,<br>LiDAR</td>
+        <td>Audio</td>
+        <td>Kinesthetic</td>
+        <td>✗</td>
+        <td>✗</td>
+      </tr>
+      <tr>
+        <td>Robotic Guide Dog</td>
+        <td>Quadruped</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✗</td>
+        <td>RGB-D<br>Camera,<br>LiDAR,<br>Force Sensor</td>
+        <td>-</td>
+        <td>Kinesthetic</td>
+        <td>✗</td>
+        <td>✗</td>
+      </tr>
+      <tr>
+        <td>Augmented Cane</td>
+        <td>Smart Cane</td>
+        <td>✓</td>
+        <td>✗</td>
+        <td>✗</td>
+        <td>RGB Camera,<br>LiDAR,<br>IMU,<br>GPS</td>
+        <td>Button</td>
+        <td>Kinesthetic<br>Vibrotactile</td>
+        <td>✗</td>
+        <td>✗</td>
+      </tr>
+      <tr>
+        <td>Intelligent Aid</td>
+        <td>Wearable</td>
+        <td>✗</td>
+        <td>✗</td>
+        <td>✗</td>
+        <td>IMU,<br>Infrared Sensor,<br>GPS</td>
+        <td>-</td>
+        <td>Cloud Alert<br>Vibrotactile</td>
+        <td>✗</td>
+        <td>✗</td>
+      </tr>
+      <tr>
+        <td>Haptic Cuff</td>
+        <td>Wearable</td>
+        <td>✗</td>
+        <td>✗</td>
+        <td>✗</td>
+        <td>RGB-D Camera,<br>CUFF Force Sensor</td>
+        <td>-</td>
+        <td>Audio<br>Force</td>
+        <td>✗</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <td><strong>Ours</strong></td>
+        <td>Wearable</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>RGB-D Camera,<br>IMU,<br>Magnetometer</td>
+        <td>Audio</td>
+        <td>Audio<br>Vibrotactile</td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </section>
       <!--/ Paper video. -->
+<section class="section" id="video">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <video controls width="90%">
+            <source src="static/videos/ICRA2026-video-demo1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- 紧凑卡片样式 -->
 <style>

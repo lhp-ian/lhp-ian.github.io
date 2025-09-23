@@ -82,12 +82,12 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://github.com"
+                <a href="#dataset-section"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="far fa-images"></i>
+                      <i class="far fa-database"></i>
                   </span>
-                  <span>Data</span>
+                  <span>Dataset</span>
                   </a>
             </div>
 
@@ -168,7 +168,7 @@
 </style>
 
 <!-- ====================== 数据集展示 ====================== -->
-<section class="section">
+<section id="dataset-section" class="section">
   <div class="container is-max-widescreen">
     <h2 class="title is-3 has-text-centered">Instruction Dataset (260)</h2>
 
@@ -182,8 +182,8 @@
     </div>
 
     <!-- Map Selector -->
-    <div class="field mb-5" style="display: flex; align-items: center; justify-content: center;">
-      <label class="label" style="margin-right: 0.5rem;">Select Map</label>
+    <div class="field has-text-centered mb-5">
+      <label class="label">Select Map</label>
       <div class="control">
         <div class="select is-medium">
           <select id="map-selector">
@@ -198,6 +198,14 @@
     <div id="dataset-display"></div>
   </div>
 </section>
+  
+<script>
+document.querySelector('a[href="#dataset-section"]').addEventListener('click', function(e) {
+  e.preventDefault(); // 阻止默认跳转
+  document.getElementById("dataset-section").scrollIntoView({ behavior: "smooth" });
+});
+</script>
+
 
 <!-- ====================== 数据与逻辑 ====================== -->
 <script>

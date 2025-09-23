@@ -157,6 +157,16 @@
   </div>
 </section>
 
+<style>
+.box {
+  padding: 0.5rem;        /* 缩小内边距 */
+  margin-bottom: 0.25rem; /* 缩小上下间距 */
+  font-size: 0.9rem;      /* 字稍小，更紧凑 */
+  box-shadow: none;        /* 可选：去掉阴影 */
+  border: 1px solid #ccc;  /* 可选：保留边框 */
+}
+</style>
+
 <!-- ====================== 数据集展示 ====================== -->
 <section class="section">
   <div class="container is-max-widescreen">
@@ -165,7 +175,7 @@
     <!-- Tabs for Types -->
     <div class="tabs is-centered is-boxed">
       <ul>
-        <li class="is-active" data-type="type1 (40)"><a>Type I</a></li>
+        <li class="is-active" data-type="type1"><a>Type I (40)</a></li>
         <li data-type="type2"><a>Type II (100)</a></li>
         <li data-type="type3"><a>Type III (120)</a></li>
       </ul>
@@ -194,6 +204,11 @@
 // ================= 数据集 JSON 示例 =================
 const Type_I = {
   "map_A": {
+    <ol>
+      <li>Please guide me to the nearest place to wash my hands.</li>
+      <li>Can you guide me to the ear and throat clinic?</li>
+      <li>Lead me to the sign-in desk.</li>
+    </ol>
     1: "Please guide me to the nearest place to wash my hands.",
     2: "Can you guide me to the ear and throat clinic?",
     3: "Lead me to the sign-in desk.",

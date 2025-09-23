@@ -99,7 +99,7 @@
 </section>
 
 <section class="section">
-  <div class="container is-max-desktop">
+  <div class="container is-max-widescreen">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -121,7 +121,7 @@
     </div>
     <!--/ Abstract. -->
 
-    <div class="container is-max-desktop">
+    <div class="container is-max-widescreen">
     <!-- Related Work. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -156,6 +156,121 @@
     <!--/ Paper video. -->
   </div>
 </section>
+
+<!-- ====================== 数据集展示 ====================== -->
+<section class="section">
+  <div class="container is-max-widescreen">
+    <h2 class="title is-3 has-text-centered">Dataset</h2>
+
+    <!-- Tabs for Types -->
+    <div class="tabs is-centered is-boxed">
+      <ul>
+        <li class="is-active" data-type="type1"><a>Type I</a></li>
+        <li data-type="type2"><a>Type II</a></li>
+        <li data-type="type3"><a>Type III</a></li>
+      </ul>
+    </div>
+
+    <!-- Map Selector -->
+    <div class="field has-text-centered mb-5">
+      <label class="label">Select Map</label>
+      <div class="control">
+        <div class="select is-medium">
+          <select id="map-selector">
+            <option value="map_A" selected>Map A</option>
+            <option value="map_B">Map B</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dataset Display Area -->
+    <div id="dataset-display"></div>
+  </div>
+</section>
+
+<!-- ====================== 数据与逻辑 ====================== -->
+<script>
+// ================= 数据集 JSON 示例 =================
+const Type_I = {
+  "map_A": {
+    1: "Please guide me to the ENT specialist, do an ultrasound, and check the physiotherapy area.",
+    2: "Please take me to check my eyes, visit the general surgeon, and pick up medicine."
+  },
+  "map_B": {
+    1: "Take me to the hormone clinic, do a quick blood test, and get therapy.",
+    2: "Please take me to the lung department, kidney clinic, and restroom."
+  }
+};
+
+const Type_II = {
+  "map_A": {
+    1: "Guide me to the cardiology clinic, then to the pharmacy, and finally to the cashier.",
+    2: "Take me to the orthopedics department, get a CT scan, and return to the main hall."
+  },
+  "map_B": {
+    1: "Bring me to the pediatrics clinic, then to the restroom, and to the lab for a test.",
+    2: "Help me go to dermatology, collect medicine, and pay the bill."
+  }
+};
+
+const Type_III = {
+  "map_A": {
+    1: "I need to see the neurologist, use the restroom, and go to the physiotherapy center.",
+    2: "Take me to the ENT clinic, then ophthalmology, and finally to the payment desk."
+  },
+  "map_B": {
+    1: "Bring me to the general surgeon, then the therapy room, and the cashier’s desk.",
+    2: "Guide me to the kidney clinic, get an ultrasound, and stop by the pharmacy."
+  }
+};
+
+// ================= 页面逻辑 =================
+const datasets = {
+  "type1": Type_I,
+  "type2": Type_II,
+  "type3": Type_III
+};
+
+let currentType = "type1";
+let currentMap = "map_A";
+
+function renderDataset(type, map) {
+  const data = datasets[type][map];
+  let html = '<div class="columns is-multiline">';
+  for (const key in data) {
+    html += `
+      <div class="column is-half">
+        <div class="box">
+          <strong>ID ${key}</strong>: ${data[key]}
+        </div>
+      </div>
+    `;
+  }
+  html += '</div>';
+  document.getElementById("dataset-display").innerHTML = html;
+}
+
+// 初始渲染
+renderDataset(currentType, currentMap);
+
+// Tab 切换 (Type)
+document.querySelectorAll(".tabs li").forEach(tab => {
+  tab.addEventListener("click", () => {
+    document.querySelectorAll(".tabs li").forEach(t => t.classList.remove("is-active"));
+    tab.classList.add("is-active");
+    currentType = tab.dataset.type;
+    renderDataset(currentType, currentMap);
+  });
+});
+
+// Map 下拉切换
+document.getElementById("map-selector").addEventListener("change", (e) => {
+  currentMap = e.target.value;
+  renderDataset(currentType, currentMap);
+});
+</script>
+
 
 <footer class="footer">
     <div class="columns is-centered">

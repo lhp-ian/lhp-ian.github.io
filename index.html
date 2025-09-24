@@ -301,7 +301,7 @@ document.querySelector('a[href="#video-section"]').addEventListener('click', fun
                 <td style="vertical-align: middle;">✓</td>
                 <td style="vertical-align: middle;">✓</td>
                 <td style="vertical-align: middle;">✓</td>
-                <td style="vertical-align: middle;">RGB-D Camera,<br>IMU,<br>Magnetometer</td>
+                <td style="vertical-align: middle;overflow-wrap: break-word; word-break: break-word;">RGB-D Camera,<br>IMU,<br>Magnetometer</td>
                 <td style="vertical-align: middle;">Audio</td>
                 <td style="vertical-align: middle;">Audio,<br>Vibrotactile</td>
                 <td style="vertical-align: middle;">✓</td>
@@ -318,6 +318,12 @@ document.querySelector('a[href="#video-section"]').addEventListener('click', fun
      </div>
     </div>
 
+    <style>
+      #device-specs td:first-child,
+      #device-specs th:first-child {
+        background-color: #ffffff !important;
+      }
+    </style>
     <div class="container is-max-widescreen">
       <div class="columns is-centered has-text-left">
         <div class="column is-four-fifths">
@@ -330,7 +336,7 @@ document.querySelector('a[href="#video-section"]').addEventListener('click', fun
                   Cross-Sectional View and Design Concept of Binocular Camera (Glasses).
                 </p>
               </div>
-              <table class="table is-bordered is-striped is-hoverable is-narrow" 
+              <table id="device-specs" class="table is-bordered is-striped is-hoverable is-narrow" 
                      style="table-layout: fixed; width: 100%; max-width:1000px; margin: 0 auto; font-size:0.82rem; text-align:center; border-collapse: collapse;">
                   <thead>
                       <tr>

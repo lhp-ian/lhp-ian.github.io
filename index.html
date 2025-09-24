@@ -152,9 +152,7 @@ document.querySelector('a[href="#video-section"]').addEventListener('click', fun
       <div class="column is-four-fifths">
         <h2 class="title is-3">Related Work</h2>
         <div class="content has-text-centered">
-          <p>
-            <strong>Comparison with LLM-based Agents for Planning:</strong>
-          </p>
+           <h2 class="title is-3"><strong>Comparison with LLM-based Agents for Planning*</strong></h2>
           <img src="./static/images/1.png" alt="LLM-based Planning Agents Comparison" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
           <p>
             Schematic diagrams of different LLM-based agents for planning. Our agent integrates the strengths of others. An external planner is employed to complement the LLM's limited mathematical reasoning. Diverse candidate plans are generated first, and the optimal one is then selected by an auxiliary LLM, which also performs feedback-driven refinement when necessary.
@@ -169,10 +167,8 @@ document.querySelector('a[href="#video-section"]').addEventListener('click', fun
     <table class="table is-bordered is-striped is-hoverable is-narrow" 
            style="table-layout: fixed; width: 100%; max-width:1000px; margin: 0 auto; font-size:0.82rem; text-align:center; border-collapse: collapse;">
       <thead>
-        <div class=="content has-text-centered">
-         <p>
-          <strong>Comparison with Assistive Systems for the Visually Impaired:</strong>
-        </p>
+        <div class="content has-text-centered">
+          <h2 class="title is-3"><strong>Comparison with Assistive Systems for the Visually Impaired</strong></h2>
         </div>
         <tr>
           <th style="vertical-align: middle;">System</th>
@@ -189,18 +185,6 @@ document.querySelector('a[href="#video-section"]').addEventListener('click', fun
       </thead>
       <tbody>
         <tr>
-          <td style="vertical-align: middle;"><a href="https://dl.acm.org/doi/full/10.1145/3706598.3713788" target="_blank">WanderGuide</a></td>
-          <td style="vertical-align: middle;">Wheeled</td>
-          <td style="vertical-align: middle;">✗</td>
-          <td style="vertical-align: middle;">✓</td>
-          <td style="vertical-align: middle;">✗</td>
-          <td style="vertical-align: middle;">RGB-D Camera,<br>LiDAR,<br>Touch Sensor</td>
-          <td style="vertical-align: middle;">Audio,<br>Button</td>
-          <td style="vertical-align: middle;">Audio,<br>Kinesthetic</td>
-          <td style="vertical-align: middle;">✓</td>
-          <td style="vertical-align: middle;">✗</td>
-        </tr>
-        <tr>
           <td style="vertical-align: middle;"><a href="https://ieeexplore.ieee.org/abstract/document/10423088" target="_blank">DRAGON</a></td>
           <td style="vertical-align: middle;">Wheeled</td>
           <td style="vertical-align: middle;">✓</td>
@@ -210,18 +194,6 @@ document.querySelector('a[href="#video-section"]').addEventListener('click', fun
           <td style="vertical-align: middle;">Audio</td>
           <td style="vertical-align: middle;">Audio,<br>Kinesthetic</td>
           <td style="vertical-align: middle;">✓</td>
-          <td style="vertical-align: middle;">✗</td>
-        </tr>
-        <tr>
-          <td style="vertical-align: middle;"><a href="https://arxiv.org/abs/2306.14055" target="_blank">Wayfinding Robot</a></td>
-          <td style="vertical-align: middle;">Quadruped</td>
-          <td style="vertical-align: middle;">✗</td>
-          <td style="vertical-align: middle;">✓</td>
-          <td style="vertical-align: middle;">✗</td>
-          <td style="vertical-align: middle;">RGB-D Camera,<br>LiDAR</td>
-          <td style="vertical-align: middle;">Audio</td>
-          <td style="vertical-align: middle;">Kinesthetic</td>
-          <td style="vertical-align: middle;">✗</td>
           <td style="vertical-align: middle;">✗</td>
         </tr>
         <tr>
@@ -286,7 +258,7 @@ document.querySelector('a[href="#video-section"]').addEventListener('click', fun
         </tr>
       </tbody>
     </table>
-    <div class=="content has-text-centered">
+    <div class="content has-text-centered">
         <p>
             To the best of our knowledge, our system is the first wearable assistive solution that can plan personalized and optimal long-horizon routes based on NL instructions and enable fully hands-free autonomous navigation for visually impaired users.
         </p>
@@ -294,6 +266,49 @@ document.querySelector('a[href="#video-section"]').addEventListener('click', fun
   </div>
 </div>
 </section>
+
+<section class="section" id="system">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"><strong>Method & System</strong></h2>
+        <div class="content has-text-centered">
+          <img src="./static/images/2.png" alt="LLM-based Planning Agents Comparison" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
+          <p>
+           
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"><strong>High-level Planning Visualization*</strong></h2>
+        <div class="content has-text-centered">
+          <img src="./static/images/2.png" alt="LLM-based Planning Agents Comparison" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
+          <p>
+           
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"><strong>Low-level Execution Visualization</strong></h2>
+        <div class="content has-text-centered">
+          <img src="./static/images/2.png" alt="LLM-based Planning Agents Comparison" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
+          <p>
+           
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
       <!--/ Paper video. -->
 <section class="section" id="video-section">
   <div class="container is-max-widescreen">

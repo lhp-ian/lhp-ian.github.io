@@ -145,18 +145,68 @@ document.querySelector('a[href="#video-section"]').addEventListener('click', fun
   </div>
  </section> 
     <!--/ Abstract. -->
-    <!-- Related Work. -->
+
+<section class="section" id="system">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"><strong>System Overview</strong></h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/2.png" alt="System Overview" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
+          <p>
+            We propose an LLM-based indoor assistive navigation system for the visually impaired, which consists of two layers: high-level planning and low-level execution.
+           The system centers on a proposed novel LLM-based planning agent that interprets users' NL instructions into semantically grounded long-horizon navigation plans. In the execution layer, a wearable assistive device, 
+            along with vision-based localization and obstacle avoidance modules, guides visually impaired users in carrying out the generated plan.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered has-text-left">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4"><strong>High-level Planning Visualization*</strong></h3>
+        <div class="content has-text-justified">
+          <img src="./static/images/3.gif" alt="High-level Planning Visualization*" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
+          <p>
+           The high-level planning process first infers location-level candidate plans that satisfy the user’s intent. It then generates node-level candidates via an external planner.
+          Finally, the optimal navigation plan is selected via evaluation and filtering. Should any anomaly be detected during evaluation, the system returns to the first stage for refinement.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered has-text-left">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4"><strong>Low-level Execution Visualization</strong></h3>
+        <div class="content has-text-justified">
+          <img src="./static/images/4.png" alt="System structure" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
+          <p>
+          In the low-level execution phase, we implement a wearable assistive device to reliably enable independent navigation based on the generated plan.
+            Indoor localization is achieved via signboard detection and recognition, and direction guidance is provided through clear voice prompts based on the user’s heading.
+            During navigation, image-based obstacle detection is employed, and obstacle avoidance is ensured through vibrotactile feedback from the wristbands to ensure the user’s safety.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- Related Work. -->
 <section class="section" id="related-work">
   <div class="container is-max-widescreen">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Related Work</h2>
-        <div class="content has-text-centered">
+        <div class="content has-text-left">
            <h3 class="title is-4"><strong>Comparison with LLM-based Agents for Planning*</strong></h3>
           <img src="./static/images/1.png" alt="LLM-based Planning Agents Comparison" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
+          <div class="content has-text-justified">
           <p>
             Schematic diagrams of different LLM-based agents for planning. Our agent integrates the strengths of others. An external planner is employed to complement the LLM's limited mathematical reasoning. Diverse candidate plans are generated first, and the optimal one is then selected by an auxiliary LLM, which also performs feedback-driven refinement when necessary.
           </p>
+          </div>
         </div>
       </div>
     </div>
@@ -167,7 +217,7 @@ document.querySelector('a[href="#video-section"]').addEventListener('click', fun
     <table class="table is-bordered is-striped is-hoverable is-narrow" 
            style="table-layout: fixed; width: 100%; max-width:1000px; margin: 0 auto; font-size:0.82rem; text-align:center; border-collapse: collapse;">
       <thead>
-        <div class="content has-text-centered">
+        <div class="content has-text-left">
           <h3 class="title is-4"><strong>Comparison with Assistive Systems for the Visually Impaired</strong></h3>
         </div>
         <tr>
@@ -258,60 +308,13 @@ document.querySelector('a[href="#video-section"]').addEventListener('click', fun
         </tr>
       </tbody>
     </table>
-    <div class="content has-text-centered">
+    <div class="content has-text-justified">
         <p>
             To the best of our knowledge, our system is the first wearable assistive solution that can plan personalized and optimal long-horizon routes based on NL instructions and enable fully hands-free autonomous navigation for visually impaired users.
         </p>
     </div>
   </div>
 </div>
-</section>
-
-<section class="section" id="system">
-  <div class="container is-max-widescreen">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3"><strong>System Overview</strong></h2>
-        <div class="content has-text-centered">
-          <img src="./static/images/2.png" alt="System Overview" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
-          <p>
-            We propose an LLM-based indoor assistive navigation system for the visually impaired, which consists of two layers: high-level planning and low-level execution.
-           The system centers on a proposed novel LLM-based planning agent that interprets users' NL instructions into semantically grounded long-horizon navigation plans. In the execution layer, a wearable assistive device, 
-            along with vision-based localization and obstacle avoidance modules, guides visually impaired users in carrying out the generated plan.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container is-max-widescreen">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h3 class="title is-4"><strong>High-level Planning Visualization*</strong></h3>
-        <div class="content has-text-centered">
-          <img src="./static/images/2.png" alt="High-level Planning Visualization*" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
-          <p>
-           Our high-level planning process first infers location-level candidate plans that satisfy the user’s intent. It then generates node-level candidates via an external planner.
-          Finally, the optimal navigation plan is selected via evaluation and filtering. Should any anomaly be detected during evaluation, the system returns to the first stage for refinement.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container is-max-widescreen">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h3 class="title is-4"><strong>Low-level Execution Visualization</strong></h3>
-        <div class="content has-text-centered">
-          <img src="./static/images/2.png" alt="System structure" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
-          <p>
-          In the low-level execution phase, we implement a wearable assistive device to reliably enable independent navigation based on the generated plan.
-            Indoor localization is achieved via signboard detection and recognition, and direction guidance is provided through clear voice prompts based on the user’s heading.
-            During navigation, image-based obstacle detection is employed, and obstacle avoidance is ensured through vibrotactile feedback from the wristbands to ensure the user’s safety.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
   
       <!--/ Paper video. -->

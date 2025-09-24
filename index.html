@@ -169,7 +169,7 @@ document.querySelector('a[href="#video-section"]').addEventListener('click', fun
         <div class="content has-text-justified">
           <img src="./static/images/3.gif" alt="High-level Planning Visualization*" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
           <p>
-           The high-level planning process first infers location-level candidate plans that satisfy the user’s intent. It then generates node-level candidates via an external planner.
+           The high-level planning first infers location-level candidate plans that satisfy the user’s intent. It then generates node-level candidates via an external planner.
           Finally, the optimal navigation plan is selected via evaluation and filtering. Should any anomaly be detected during evaluation, the system returns to the first stage for refinement.
           </p>
         </div>
@@ -183,7 +183,7 @@ document.querySelector('a[href="#video-section"]').addEventListener('click', fun
         <div class="content has-text-justified">
           <img src="./static/images/4.png" alt="System structure" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
           <p>
-          In the low-level execution phase, we implement a wearable assistive device to reliably enable independent navigation based on the generated plan.
+          We implement a wearable assistive device to reliably enable independent navigation based on the generated plan.
             Indoor localization is achieved via signboard detection and recognition, and direction guidance is provided through clear voice prompts based on the user’s heading.
             During navigation, image-based obstacle detection is employed, and obstacle avoidance is ensured through vibrotactile feedback from the wristbands to ensure the user’s safety.
           </p>
@@ -204,13 +204,11 @@ document.querySelector('a[href="#video-section"]').addEventListener('click', fun
           </div>
         </div>
     </div>
-        <div class="content has-text-left">
-            <h3 class="title is-4"><strong>Comparison with Assistive Systems for the Visually Impaired</strong></h3>
-          </div>
   </div>
   
  <div class="container is-max-widescreen">
     <div class="columns is-centered has-text-left">
+      <h3 class="title is-4"><strong>Comparison with Assistive Systems for the Visually Impaired</strong></h3>
       <div class="column is-four-fifths">
       <table class="table is-bordered is-striped is-hoverable is-narrow" 
              style="table-layout: fixed; width: 100%; max-width:1000px; margin: 0 auto; font-size:0.82rem; text-align:center; border-collapse: collapse;">
@@ -311,6 +309,123 @@ document.querySelector('a[href="#video-section"]').addEventListener('click', fun
     </div>
    </div>
   </div>
+
+   <div class="container is-max-widescreen">
+    <div class="columns is-centered has-text-left">
+        <div class="column is-four-fifths">
+           <h3 class="title is-4"><strong>Hardware</strong></h3>
+          <img src="./static/images/1.png" alt="LLM-based Planning Agents Comparison" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
+          <div class="content has-text-justified">
+          <p>
+            
+          </p>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered has-text-left">
+        <h3 class="title is-4"><strong>Device Specifications</strong></h3>
+        <div class="column is-four-fifths">
+            <table class="table is-bordered is-striped is-hoverable is-narrow" 
+                   style="table-layout: fixed; width: 100%; max-width:1000px; margin: 0 auto; font-size:0.82rem; text-align:center; border-collapse: collapse;">
+                <thead>
+                    <tr>
+                        <th style="vertical-align: middle;">Component</th>
+                        <th style="vertical-align: middle;">Parameter</th>
+                        <th style="vertical-align: middle;">Specification</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="7" style="vertical-align: middle;">Binocular Camera (Glasses)</td>
+                        <td>Dimensions</td>
+                        <td>166mm × 78mm × 66mm</td>
+                    </tr>
+                    <tr>
+                        <td>Weight</td>
+                        <td>198g</td>
+                    </tr>
+                    <tr>
+                        <td>Camera Module</td>
+                        <td>Kangcheng Technology Dual-frame Camera</td>
+                    </tr>
+                    <tr>
+                        <td>Minimum Resolution</td>
+                        <td>800x600</td>
+                    </tr>
+                    <tr>
+                        <td>Frame Rate</td>
+                        <td>30FPS</td>
+                    </tr>
+                    <tr>
+                        <td>Field of View</td>
+                        <td>120°</td>
+                    </tr>
+                    <tr>
+                        <td>Depth Range</td>
+                        <td>0.5m-25m</td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="4" style="vertical-align: middle;">Monocular Camera</td>
+                        <td>Camera Module</td>
+                        <td>USB Camera WX172HD</td>
+                    </tr>
+                    <tr>
+                        <td>Minimum Resolution</td>
+                        <td>640x480</td>
+                    </tr>
+                    <tr>
+                        <td>Frame Rate</td>
+                        <td>30FPS</td>
+                    </tr>
+                    <tr>
+                        <td>Field of View</td>
+                        <td>120°</td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="4" style="vertical-align: middle;">Vibration Wristband</td>
+                        <td>Microcontroller Unit</td>
+                        <td>LILYGO T-Micro32 plus</td>
+                    </tr>
+                    <tr>
+                        <td>Wireless Protocol</td>
+                        <td>Bluetooth v4.2 BR/EDR and BLE</td>
+                    </tr>
+                    <tr>
+                        <td>Pulse Width</td>
+                        <td>150ms</td>
+                    </tr>
+                    <tr>
+                        <td>Pulse Interval</td>
+                        <td>100ms</td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="4" style="vertical-align: middle;">Electronic Compass</td>
+                        <td>Angular Resolution</td>
+                        <td>0.005°/LSB</td>
+                    </tr>
+                    <tr>
+                        <td>Magnetic Field Resolution</td>
+                        <td>0.0667mG/LSB</td>
+                    </tr>
+                    <tr>
+                        <td>Acceleration Resolution</td>
+                        <td>0.5mg/LSB</td>
+                    </tr>
+                    <tr>
+                        <td>Output Frequency</td>
+                        <td>0.2Hz-200Hz</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 </section>
   
       <!--/ Paper video. -->

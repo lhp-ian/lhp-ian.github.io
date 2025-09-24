@@ -167,6 +167,10 @@ document.querySelector('a[href="#video-section"]').addEventListener('click', fun
       <div class="column is-four-fifths">
         <p>
         </p>
+        <p>
+        </p>
+        <p>
+        </p>
         <h3 class="title is-4"><strong>High-level Planning Visualization*</strong></h3>
         <div class="content has-text-justified">
           <img src="./static/images/3.gif" alt="High-level Planning Visualization*" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
@@ -181,8 +185,12 @@ document.querySelector('a[href="#video-section"]').addEventListener('click', fun
   <div class="container is-max-widescreen">
     <div class="columns is-centered has-text-left">
       <div class="column is-four-fifths">
-       <p>
-       </p>
+        <p>
+        </p>
+        <p>
+        </p>
+        <p>
+        </p>
         <h3 class="title is-4"><strong>Low-level Execution Visualization</strong></h3>
         <div class="content has-text-justified">
           <img src="./static/images/4.png" alt="System structure" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
@@ -201,6 +209,10 @@ document.querySelector('a[href="#video-section"]').addEventListener('click', fun
         <div class="column is-four-fifths">
           <p>
           </p>
+          <p>
+          </p>
+          <p>
+          </p>
           <h3 class="title is-4"><strong>Comparison with LLM-based Agents for Planning*</strong></h3>
           <img src="./static/images/1.png" alt="LLM-based Planning Agents Comparison" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
           <div class="content has-text-justified">
@@ -215,6 +227,10 @@ document.querySelector('a[href="#video-section"]').addEventListener('click', fun
    <div class="container is-max-widescreen">
       <div class="columns is-centered has-text-left">
         <div class="column is-four-fifths">
+          <p>
+          </p>
+          <p>
+          </p>
           <p>
           </p>
          <h3 class="title is-4"><strong>Comparison with Assistive Systems for the Visually Impaired</strong></h3>
@@ -318,17 +334,15 @@ document.querySelector('a[href="#video-section"]').addEventListener('click', fun
      </div>
     </div>
 
-    <style>
-      #device-specs td:first-child,
-      #device-specs th:first-child {
-        background-color: #ffffff !important;
-      }
-    </style>
     <div class="container is-max-widescreen">
       <div class="columns is-centered has-text-left">
         <div class="column is-four-fifths">
-          <p>
-          </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
           <h3 class="title is-4"><strong>Device Specifications</strong></h3>
             <img src="./static/images/5.png" alt="Glasses" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
               <div class="content has-text-justified">
@@ -442,6 +456,10 @@ document.querySelector('a[href="#video-section"]').addEventListener('click', fun
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
+        <p>
+          User Instruction: "Please take me to the skin doctor after visiting the eye clinic, with a stop at the bathroom on the way, and finally bring me to pay the bill."
+          Environment: Hospital A (Map A).
+        </p>
         <div class="publication-video">
           <video>
             <source src="static/videos/ICRA2026-video-demo1.mp4" type="video/mp4">
@@ -452,6 +470,427 @@ document.querySelector('a[href="#video-section"]').addEventListener('click', fun
     </div>
   </div>
 </section>
+
+<!--/ Map. -->
+<section class="section" id="map">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Map</h2>
+        
+        <!-- Map A -->
+        <h3 class="title is-4">Map A</h3>
+        <img src="./static/images/Map A.png" alt="mapA" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
+        <pre style="text-align: left; background-color: #f5f5f5; padding: 1rem; overflow-x: auto;">
+{
+map_A = {
+    "nodes": [
+        {
+            "id": "n0",
+            "name": "ENT&HN Surgery Dept.",
+            "type": "location-level",
+            "coord": [0.06, 0.22]
+        },
+        {
+            "id": "n1",
+            "type": "intersection-level",
+            "coord": [0.11, 0.14]
+        },
+        {
+            "id": "n2",
+            "type": "intersection-level",
+            "coord": [0.11, 0.61]
+        },
+        {
+            "id": "n3",
+            "name": "Restroom",
+            "type": "location-level",
+            "coord": [0.15, 0.10]
+        },
+        {
+            "id": "n4",
+            "type": "intersection-level",
+            "coord": [0.19, 0.14]
+        },
+        {
+            "id": "n5",
+            "type": "intersection-level",
+            "coord": [0.19, 0.61]
+        },
+        {
+            "id": "n6",
+            "name": "Respiratory Dept.",
+            "type": "location-level",
+            "coord": [0.19, 0.69]
+        },
+        {
+            "id": "n7",
+            "name": "Registration",
+            "type": "location-level",
+            "coord": [0.26, 0.18]
+        },
+        {
+            "id": "n8",
+            "name": "Cashier",
+            "type": "location-level",
+            "coord": [0.28, 0.33]
+        },
+        {
+            "id": "n9",
+            "type": "intersection-level",
+            "coord": [0.33, 0.14]
+        },
+        {
+            "id": "n10",
+            "type": "intersection-level",
+            "coord": [0.33, 0.33]
+        },
+        {
+            "id": "n11",
+            "type": "intersection-level",
+            "coord": [0.33, 0.61]
+        },
+        {
+            "id": "n12",
+            "type": "intersection-level",
+            "coord": [0.33, 0.69]
+        },
+        {
+            "id": "n13",
+            "name": "Thoracic Surgery Dept.",
+            "type": "location-level",
+            "coord": [0.33, 0.90]
+        },
+        {
+            "id": "n14",
+            "type": "intersection-level",
+            "coord": [0.42, 0.69]
+        },
+        {
+            "id": "n15",
+            "type": "intersection-level",
+            "coord": [0.42, 0.93]
+        },
+        {
+            "id": "n16",
+            "name": "TCM Physiotherapy",
+            "type": "location-level",
+            "coord": [0.46, 0.21]
+        },
+        {
+            "id": "n17",
+            "type": "intersection-level",
+            "coord": [0.50, 0.33]
+        },
+        {
+            "id": "n18",
+            "type": "start",
+            "coord": [0.50, 0.69]
+        },
+        {
+            "id": "n19",
+            "name": "Restroom",
+            "type": "location-level",
+            "coord": [0.61, 0.27]
+        },
+        {
+            "id": "n20",
+            "type": "intersection-level",
+            "coord": [0.67, 0.69]
+        },
+        {
+            "id": "n21",
+            "name": "Dermatology Dept.",
+            "type": "location-level",
+            "coord": [0.67, 0.93]
+        },
+        {
+            "id": "n22",
+            "name": "Nephrology Dept.",
+            "type": "location-level",
+            "coord": [0.76, 0.05]
+        },
+        {
+            "id": "n23",
+            "type": "intersection-level",
+            "coord": [0.76, 0.13]
+        },
+        {
+            "id": "n24",
+            "type": "intersection-level",
+            "coord": [0.76, 0.33]
+        },
+        {
+            "id": "n25",
+            "type": "intersection-level",
+            "coord": [0.76, 0.42]
+        },
+        {
+            "id": "n26",
+            "type": "intersection-level",
+            "coord": [0.76, 0.69]
+        },
+        {
+            "id": "n27",
+            "type": "intersection-level",
+            "coord": [0.76, 0.90]
+        },
+        {
+            "id": "n28",
+            "name": "Clinical Lab",
+            "type": "location-level",
+            "coord": [0.81, 0.22]
+        },
+        {
+            "id": "n29",
+            "name": "Ophthalmology Dept.",
+            "type": "location-level",
+            "coord": [0.81, 0.51]
+        },
+        {
+            "id": "n30",
+            "type": "intersection-level",
+            "coord": [0.91, 0.13]
+        },
+        {
+            "id": "n31",
+            "type": "intersection-level",
+            "coord": [0.91, 0.42]
+        },
+        {
+            "id": "n32",
+            "name": "Ophthalmology Operating Room",
+            "type": "location-level",
+            "coord": [0.91, 0.61]
+        },
+        {
+            "id": "n33",
+            "name": "Treatment Center",
+            "type": "location-level",
+            "coord": [0.95, 0.33]
+        }
+
+    ],
+    "edges": [
+        ["n0", "n1"],
+        ["n1", "n2"],
+        ["n1", "n3"],
+        ["n1", "n4"],
+        ["n2", "n5"],
+        ["n3", "n4"],
+        ["n4", "n5"],
+        ["n4", "n7"],
+        ["n4", "n9"],
+        ["n5", "n6"],
+        ["n5", "n11"],
+        ["n7", "n9"],
+        ["n8", "n10"],
+        ["n9", "n10"],
+        ["n10", "n11"],
+        ["n10", "n17"],
+        ["n11", "n12"],
+        ["n12", "n13"],
+        ["n12", "n14"],
+        ["n13", "n15"],
+        ["n14", "n15"],
+        ["n14", "n18"],
+        ["n16", "n17"],
+        ["n17", "n18"],
+        ["n17", "n19"],
+        ["n17", "n24"],
+        ["n18", "n20"],
+        ["n19", "n24"],
+        ["n20", "n21"],
+        ["n20", "n26"],
+        ["n21", "n27"],
+        ["n22", "n23"],
+        ["n23", "n24"],
+        ["n23", "n28"],
+        ["n23", "n30"],
+        ["n24", "n25"],
+        ["n25", "n26"],
+        ["n25", "n29"],
+        ["n25", "n31"],
+        ["n26", "n27"],
+        ["n30", "n31"],
+        ["n30", "n33"],
+        ["n31", "n33"],
+        ["n31", "n32"]
+    ]
+}
+}
+        </pre>
+
+        <!-- Map B -->
+        <h3 class="title is-4">Map B</h3>
+        <img src="./static/images/Map B.png" alt="mapB" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
+        <pre style="text-align: left; background-color: #f5f5f5; padding: 1rem; overflow-x: auto;">
+{
+ map_B = {
+    "nodes": [
+        {
+            "id": "n0",
+            "name": "Ultrasonography",
+            "type": "location-level",
+            "coord": [0.09, 0.54]
+        },
+        {
+            "id": "n1",
+            "name": "Endocrinology",
+            "type": "location-level",
+            "coord": [0.09, 0.89]
+        },
+        {
+            "id": "n2",
+            "name": "Ophthalmology",
+            "type": "location-level",
+            "coord": [0.14, 0.07]
+        },
+        {
+            "id": "n3",
+            "name": "Ophthalmic Examination",
+            "type": "location-level",
+            "coord": [0.14, 0.23]
+        },
+        {
+            "id": "n4",
+            "name": "Toilet",
+            "type": "location-level",
+            "coord": [0.22, 0.42]
+        },
+        {
+            "id": "n5",
+            "type": "intersection-level",
+            "coord": [0.27, 0.20]
+        },
+        {
+            "id": "n6",
+            "type": "intersection-level",
+            "coord": [0.27, 0.54]
+        },
+        {
+            "id": "n7",
+            "type": "intersection-level",
+            "coord": [0.27, 0.89]
+        },
+        {
+            "id": "n8",
+            "name": "Registration&Cashier",
+            "type": "location-level",
+            "coord": [0.47, 0.82]
+        },
+        {
+            "id": "n9",
+            "name": "Block Therapy Room",
+            "type": "location-level",
+            "coord": [0.47, 0.12]
+        },
+        {
+            "id": "n10",
+            "name": "VIP/Exclusive Clinic",
+            "type": "location-level",
+            "coord": [0.52, 0.40]
+        },
+        {
+            "id": "n11",
+            "type": "intersection-level",
+            "coord": [0.52, 0.54]
+        },
+        {
+            "id": "n12",
+            "name": "Pharmacy",
+            "type": "location-level",
+            "coord": [0.52, 0.67]
+        },
+        {
+            "id": "n13",
+            "type": "start",
+            "coord": [0.56, 0.94]
+        },
+        {
+            "id": "n14",
+            "type": "intersection-level",
+            "coord": [0.76, 0.20]
+        },
+        {
+            "id": "n15",
+            "type": "intersection-level",
+            "coord": [0.76, 0.54]
+        },
+        {
+            "id": "n16",
+            "type": "intersection-level",
+            "coord": [0.76, 0.89]
+        },
+        {
+            "id": "n17",
+            "name": "Toilet",
+            "type": "location-level",
+            "coord": [0.81, 0.42]
+        },
+        {
+            "id": "n18",
+            "name": "Hematology",
+            "type": "location-level",
+            "coord": [0.85, 0.07]
+        },
+        {
+            "id": "n19",
+            "name": "General Surgery",
+            "type": "location-level",
+            "coord": [0.89, 0.44]
+        },
+        {
+            "id": "n20",
+            "name": "Otolaryngology",
+            "type": "location-level",
+            "coord": [0.90, 0.64]
+        },
+        {
+            "id": "n21",
+            "name": "Rheumatology&Immunology",
+            "type": "location-level",
+            "coord": [0.89, 0.80]
+        },
+
+    ],
+    "edges": [
+        ["n0", "n6"],
+        ["n1", "n7"],
+        ["n2", "n5"],
+        ["n3", "n5"],
+        ["n4", "n6"],
+        ["n5", "n6"],
+        ["n5", "n9"],
+        ["n5", "n14"],
+        ["n6", "n11"],
+        ["n6", "n7"],
+        ["n7", "n8"],
+        ["n7", "n13"],
+        ["n7", "n16"],
+        ["n8", "n16"],
+        ["n9", "n14"],
+        ["n10", "n11"],
+        ["n11", "n12"],
+        ["n11", "n15"],
+        ["n13", "n16"],
+        ["n14", "n15"],
+        ["n14", "n18"],
+        ["n15", "n16"],
+        ["n15", "n17"],
+        ["n15", "n19"],
+        ["n15", "n20"],
+        ["n16", "n21"]
+    ]
+}
+}
+        </pre>
+
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <!-- 紧凑卡片样式 -->
 <style>

@@ -907,9 +907,9 @@ document.querySelector('a[href="#video-section"]').addEventListener('click', fun
 You are the conversational mediator between the user and an indoor navigation system for the visually impaired, called LLM-alpha.
 
 ## Role:
-- Process user natural language requests (Q_NL), dialogue history (H), and optional current plan (P).
-- Decide whether the request is navigation-related or not.
-- If navigation-related, structure the request for LLM-beta; otherwise, reply directly to the user.
+Process user natural language requests (Q_NL), dialogue history (H), and optional current plan (P).
+Decide whether the request is navigation-related or not.
+If navigation-related, structure the request for LLM-beta; otherwise, reply directly to the user.
 
 ## Output Format:
 You must always output a valid JSON object with the following structure:
@@ -925,13 +925,13 @@ You must always output a valid JSON object with the following structure:
 
 ## Rules:
 1. If the request is not navigation-related (e.g., greetings, status queries, general questions):
-- Set is_navigation: false.
-- Set forward: null.
-- Reply directly in agent_reply.
+   Set is_navigation: false.
+   Set forward: null.
+   Reply directly in agent_reply.
 
 2. If the request is navigation-related:
-- Set is_navigation: true.
-- Fill the forward object with:
+   Set is_navigation: true.
+   Fill the forward object with:
         Q_NL: the original or clarified navigation request;
         confirm_required: true if you need clarification (e.g., ambiguous destination), otherwise false;
         dialogue_context: brief summary of relevant context from H or current_plan.
@@ -995,23 +995,23 @@ You are the plan generator for an indoor navigation system for the visually impa
 Your task is to generate all location-level candidate plans, based on a confirmed natural-language navigation request (Q_NL) that has already been verified by LLM-alpha, and a JSON topological map (G).
 
 ## Role:
-- Interpret user navigation requests (Q_NL) and generate candidate location-level plans.
-- Ground natural language instructions to location nodes in the topological map (G).
-- Generate a Directed Acyclic Graph (DAG) representation of candidate plans, considering order and flexible constraints.
-- Handle replanning when feedback (R) is provided.
+Interpret user navigation requests (Q_NL) and generate candidate location-level plans.
+Ground natural language instructions to location nodes in the topological map (G).
+Generate a Directed Acyclic Graph (DAG) representation of candidate plans, considering order and flexible constraints.
+Handle replanning when feedback (R) is provided.
 
 ## Input Format:
-- User natural language navigation request (Q_NL).
-- JSON-format topological map of the environment (G):
-    - `nodes`: a list of nodes, each with fields:
-        - `id`: unique identifier
-        - `name` (optional): real-world location label
-        - `type`: `"location-level"` or `"intersection-level"`
-        - `coord`: [x,y] coordinates (float)
-    - `edges`: undirected connectivity between node IDs
-- Optional feedback information for replanning (R) (may be empty):
-    - {"what": "...", "how": "..."}, evaluator suggests how to adjust candidates;
-    - {"where": "..."}, evaluator specifies a new current start location for replanning.
+User natural language navigation request (Q_NL).
+JSON-format topological map of the environment (G):
+  - `nodes`: a list of nodes, each with fields:
+      - `id`: unique identifier
+      - `name` (optional): real-world location label
+      - `type`: `"location-level"` or `"intersection-level"`
+      - `coord`: [x,y] coordinates (float)
+  - `edges`: undirected connectivity between node IDs
+Optional feedback information for replanning (R) (may be empty):
+  - {"what": "...", "how": "..."}, evaluator suggests how to adjust candidates;
+  - {"where": "..."}, evaluator specifies a new current start location for replanning.
 
 ## Output Format:
 You must always output a valid JSON object with no extra text outside, for example:
@@ -1034,9 +1034,9 @@ You must always output a valid JSON object with no extra text outside, for examp
       }
 -----------------------------------------------
 where:
-        - `nodes`: list of all location-level nodes IDs required in these plans, in the form[{"id": "..."}, ...];
-        - `edges`: list of directed edges encoding strict precedence constraints, in the form[["idA", "idB"], ...];
-        - `flexible`: list of location-level node IDs that are unconstrained and may appear at any position.
+      - `nodes`: list of all location-level nodes IDs required in these plans, in the form[{"id": "..."}, ...];
+      - `edges`: list of directed edges encoding strict precedence constraints, in the form[["idA", "idB"], ...];
+      - `flexible`: list of location-level node IDs that are unconstrained and may appear at any position.
 
 ## Rules:
 1. Generate DAG-represented location-level plans based on the user navigation requests (Q_NL) and the topological map (G).
@@ -1182,14 +1182,14 @@ You are the plan evaluator and selector for an indoor navigation system for the 
 Your task is to evaluate node-level candidate plans, select the optimal one, and provide feedback for replanning when needed.
 
 ## Role:.
-- Ensure all plans are grounded in the topological map(G).
-- Evaluate node-level candidate plans (P_nod) via hard constraints and path optimality.
-- Select the best plan that satisfies user intent based on the user instruction (Q_NL) and minimizes total path length.
-- Provide structured feedback to LLM-beta when no suitable plan is found.
+Ensure all plans are grounded in the topological map(G).
+Evaluate node-level candidate plans (P_nod) via hard constraints and path optimality.
+Select the best plan that satisfies user intent based on the user instruction (Q_NL) and minimizes total path length.
+Provide structured feedback to LLM-beta when no suitable plan is found.
 
 ## Input Format:
-- Original user natural language instruction (Q_NL).
-- P_nod: JSON-format node-level candidate plans, for example:
+Original user natural language instruction (Q_NL).
+P_nod: JSON-format node-level candidate plans, for example:
 -----------------------------------------------
     {
       "plan1": {
@@ -1214,14 +1214,14 @@ Your task is to evaluate node-level candidate plans, select the optimal one, and
                ...
     }
 -----------------------------------------------
-- D: List of total path lengths for each candidate plan (same order as P_nod).
-- JSON-format topological map of the environment (G):
-    - `nodes`: a list of nodes, each with fields:
-        - `id`: unique identifier
-        - `name` (optional): real-world location label
-        - `type`: `"location-level"` or `"intersection-level"`
-        - `coord`: [x,y] coordinates (float)
-    - `edges`: undirected connectivity between node IDs
+D: List of total path lengths for each candidate plan (same order as P_nod).
+JSON-format topological map of the environment (G):
+  - `nodes`: a list of nodes, each with fields:
+      - `id`: unique identifier
+      - `name` (optional): real-world location label
+      - `type`: `"location-level"` or `"intersection-level"`
+      - `coord`: [x,y] coordinates (float)
+  - `edges`: undirected connectivity between node IDs
 
 ## Output Format:
 You must always output a valid JSON object with no extra text outside, for example:
@@ -1244,9 +1244,9 @@ or
 }
 -----------------------------------------------
 where:
-- `selected_plan_index`: index of the selected plan in P_nod (-1 if no plan selected);
-- `replanning_required`: true if feedback is provided to LLM-beta;
-- `feedback`: structured feedback for LLM-beta (only present if replanning_required=true).
+  - `selected_plan_index`: index of the selected plan in P_nod (-1 if no plan selected);
+  - `replanning_required`: true if feedback is provided to LLM-beta;
+  - `feedback`: structured feedback for LLM-beta (only present if replanning_required=true).
 
 ## Rules:
 1. Apply two-stage evaluation to all candidate plans based on the user instruction (Q_NL):
@@ -1409,8 +1409,6 @@ Example 6 (Optimality Tie-breaker):
     </div>
   </div>
 </section>
-
-
 
 <!-- 紧凑卡片样式 -->
 <style>
@@ -1782,22 +1780,6 @@ document.getElementById("map-selector").addEventListener("change", (e) => {
   renderDataset(currentType, currentMap);
 });
 </script>
-
-<section class="section">
-<div class="container is-max-widescreen">
-  <!-- Abstract. -->
-  <div class="columns is-centered has-text-centered">
-    <div class="column is-four-fifths">
-      <h2 class="title is-3">Acknowledgment</h2>
-      <div class="content has-text-justified">
-        <p>
-         A small portion of the scripts and code was drafted with assistance from OpenAI's ChatGPT. All final implementations were thoroughly reviewed, verified, and adapted by the authors to ensure correctness and suitability for the experiments.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-</section> 
 
 <footer class="footer">
     <div class="columns is-centered">
